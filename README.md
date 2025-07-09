@@ -10,6 +10,7 @@
 - scikit-learn
 - joblib
 - Docker
+- Pandas
 
 #Как запустить локально
 
@@ -18,18 +19,15 @@
 pip install -r requirements.txt
 python train_model.py
 
-#2. Запусти FastAPI сервер
 
-uvicorn main:app --reload
-
-#3. Swagger UI:
+#2. Swagger UI:
 
 #Перейти в браузере: [http://localhost:8000/docs](http://localhost:8000/docs)
 
 #Docker
 
 docker build -t fastapi-ml-service .
-docker run -p 8000:8000 fastapi-ml-service
+docker run -d -p 8000:80 fastapi-ml-service
 
 #Пример запроса
 

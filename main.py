@@ -5,7 +5,7 @@ import joblib
 import logging
 
 app = FastAPI()
-model = joblib.load("model.pkl")
+model = joblib.load("/app/model.pkl")
 class_names = ["setosa", "versicolor", "virginica"]
 
 logging.basicConfig(level=logging.INFO)
